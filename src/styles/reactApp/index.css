@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Nordique";
+  src: local("Nordique"),
+   url("../../fonts/Nordique-Pro-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "PublicaR";
+  src: local("PublicaR"),
+   url("../../fonts/PublicaRegular.ttf") format("truetype");
+  font-weight: bold;
+}

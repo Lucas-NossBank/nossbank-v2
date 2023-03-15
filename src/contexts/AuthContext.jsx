@@ -4,54 +4,55 @@ import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import api from "../services/api.js";
 
-export const GeneralContext = createContext();
+export const AuthContext = createContext();
 
-const GeneralProvider = ({ children }) => {
+const AuthProvider = ({ children }) => {
   const [currentLanguage, setCurrentLanguage] = useState("pt");
   const [show, setShow] = useState(false);
+  const [hover, setHover] = useState(0);
+  const [hover1, setHover1] = useState(false);
+  const [hover2, setHover2] = useState(false);
+  const [hover3, setHover3] = useState(false);
+  const [hover4, setHover4] = useState(false);
   const [user, setuser] = useState({});
-
+  
   const navigate = useNavigate();
 
   /*-------------------- Skip line --------------------*/
 
   async function SubmitFunction(data) {
-    const templateParams = {
-      from_name: data.name,
-      message: data.message,
-      email: data.email,
-    };
+    
 
-    console.log(templateParams);
+    console.log(data);
 
-    emailjs
-      .send(
-        "service_vjasrhp",
-        "template_83sakw3",
-        templateParams,
-        "BwXWctA1WZJmzYuvQ"
-      )
-      .then((res) => {
-        console.log(res);
-        toast.success("E-mail has been sent!", {
-          icon: "👏",
-          style: {
-            borderRadius: "10px",
-            background: "#333",
-            color: "#fff",
-          },
-        });
-      })
-      .catch((err) =>
-        toast.error("E-mail was not sent.", {
-          icon: "❌",
-          style: {
-            borderRadius: "10px",
-            background: "#333",
-            color: "#fff",
-          },
-        })
-      );
+    // emailjs
+    //   .send(
+    //     "service_vjasrhp",
+    //     "template_83sakw3",
+    //     templateParams,
+    //     "BwXWctA1WZJmzYuvQ"
+    //   )
+    //   .then((res) => {
+    //     console.log(res);
+    //     toast.success("E-mail has been sent!", {
+    //       icon: "👏",
+    //       style: {
+    //         borderRadius: "10px",
+    //         background: "#333",
+    //         color: "#fff",
+    //       },
+    //     });
+    //   })
+    //   .catch((err) =>
+    //     toast.error("E-mail was not sent.", {
+    //       icon: "❌",
+    //       style: {
+    //         borderRadius: "10px",
+    //         background: "#333",
+    //         color: "#fff",
+    //       },
+    //     })
+    //   );
   }
 
   /*-------------------- Skip line --------------------*/
@@ -82,21 +83,31 @@ const GeneralProvider = ({ children }) => {
 
   return (
     <>
-      <GeneralContext.Provider
+      <AuthContext.Provider
         value={{
-          setCurrentLanguage,
-          SubmitFunction,
           currentLanguage,
           show,
+          hover,
+          hover1,
+          hover2,
+          hover3,
+          hover4,
+          setHover,
+          setHover1,
+          setHover2,
+          setHover3,
+          setHover4,
+          setCurrentLanguage,
+          SubmitFunction,
           setShow,
           LoginUser,
         }}
       >
         {children}
-      </GeneralContext.Provider>
+      </AuthContext.Provider>
       <Toaster position="bottom-right" reverseOrder={true} />
     </>
   );
 };
 
-export default GeneralProvider;
+export default AuthProvider;

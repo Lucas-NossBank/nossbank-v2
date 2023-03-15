@@ -9,14 +9,18 @@ Description: Project made with react
 ****************************************/
 
 const GlobalStyle = createGlobalStyle`
-  :root{
+  :root{   
     /* Colors */
     --color-primary: #FFCC33;
     --color-secondary: #CFB53B;
     --color-tertiary: #D4AF37;
     --color-quartenary: #CBA135;
     --color-quinternary: #1B1B1B;
-    --color-senary: #6A1380;
+    --color-senary: #19284A;
+    --main-light-color: #55B8DF;
+    --main-dark-color: #272974;
+    --main-sand-color: #F8F9F0;
+    --main-yellow: #FFDE59;
     --color-feedback-negative: #E83F5B;
     --color-feedback-warning: #ffcd07;
     --color-feedback-success: #3FE864;
@@ -46,6 +50,7 @@ const GlobalStyle = createGlobalStyle`
     --blur-effect-01: rgba( 31, 38, 135, 0.37 );
     --blur-effect-02: rgba( 2, 2, 2, 0.6 );
     --blur-effect-03: rgba( 230, 230, 230, 0.8 );
+    --blur-effect-04: rgba( 2, 2, 2, 0.9 );
     --button-color-green: #69F579;
     --button-color-red: #EB4946;
     --color-github: #6E5494;
@@ -67,10 +72,12 @@ const GlobalStyle = createGlobalStyle`
     --button-height-little: 32px;
     --container-width: 1200px;
     /* Font Family */
-    --font-primary-nunito: 'Nunito';
+    --font-primary-nunito: 'Nunito Sans';
     --font-secondary-inter: 'Inter';
     --font-tertiary-roboto: 'Roboto';
-    --font-quartenary-andika: 'Andika';
+    --font-quartenary-mont: 'Montserrat Alternates';
+    --font-quinternary-nordique: 'Nordique';
+    --font-publicaR: "PublicaR";
     
     /*  Text Sizes */
     --font-grand-60: 60px;
@@ -106,6 +113,8 @@ const GlobalStyle = createGlobalStyle`
     --font-line-height-20: 20px;
     --font-line-height-16: 16px;
     /*  Text Weight */
+    --font-weight-900: 900;
+    --font-weight-800: 800;
     --font-weight-700: 700;
     --font-weight-600: 600;
     --font-weight-500: 500;
@@ -144,6 +153,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         border: 0;
+        line-height: 0;
         font-size: 100%;
         font: inherit;
         vertical-align: baseline;

@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/reactApp/index.css'
+import './fonts/Nordique-Pro-Bold.ttf'
+import './fonts/PublicaRegular.ttf'
 import App from './App';
 import reportWebVitals from './__tests__/reportWebVitals';
 import GlobalStyle from './styles/modules/global';

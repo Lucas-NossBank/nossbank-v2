@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 /****************************************
     Author: Lucas Mitori Oliveira Okumura
@@ -11,14 +11,27 @@ import styled from "styled-components";
             Version: 1.0
 ****************************************/
 
+export const Gradient = keyframes`
+  0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+`;
+
 export const Header = styled.header`
-  width: 300px;
+  width: 100%;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--color-navigation);
-  z-index: 1001;
+  /* background-color: var(--color-navigation); */
+  background-color: var(--blur-effect-04);
+  z-index: 1002;
   transform: ${({ show }) => (show ? "translateX(0)" : "translateX(-100%)")};
   transition: 0.7s ease-in-out;
   @media screen and (min-width: 370px) {
@@ -32,11 +45,11 @@ export const Header = styled.header`
   @media screen and (min-width: 1024px) {
     transform: none;
     width: 100%;
-    height: 160px;
+    height: 19.5vh;
     position: fixed;
     top: 0;
     bottom: 0;
-    background-color: var(--blur-effect-01);
+    background-color: var(--blur-effect-04);
     z-index: 1002;
   }
   @media screen and (min-width: 1200px) {
@@ -88,13 +101,20 @@ export const ImageDiv = styled.div`
   height: 150px;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+
   & > h2 {
-    font-family: var(--font-primary-nunito);
-    font-size: var(--font-subtitle-24);
-    font-weight: var(--font-weight-700);
+    font-family: var(--font-publicaR);
+    font-size: var(--font-subtitle-30);
+    font-weight: var(--font-weight-800);
     color: var(--color-white-mode);
-    margin-top: 30px;
-    width: 100%;
+    margin-top: 10px;
+    letter-spacing: 3px;
+    height: 40px;
+    padding: 0px;
+
   }
   @media screen and (min-width: 370px) {
   }
@@ -109,12 +129,13 @@ export const ImageDiv = styled.div`
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     & > h2 {
-      margin: 0;
+      margin: 0px;
       font-size: var(--font-subtitle-24);
       width: 100%;
+      padding: 0px;
       text-align: center;
     }
   }
@@ -161,10 +182,11 @@ export const NavBarItems = styled.div`
   align-items: center;
   & > a {
     padding-left: 20px;
-    font-family: var(--font-primary-nunito);
+    font-family: var(--font-publicaR);
     font-size: var(--font-subtitle-20);
     color: var(--color-grey-0);
     text-decoration: none;
+    letter-spacing: 2px;
   }
   & > a:hover {
     color: var(--color-secondary);
@@ -252,14 +274,17 @@ export const USABtn = styled.button`
 `;
 
 export const DashboardAdm = styled(Link)`
-  width: 60%;
-  height: 70%;
+  width: 120px;
+  height: 90px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  border: 10px solid var(--color-grey-4);
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: ${Gradient} 15s ease infinite; */
   border-radius: var(--radius-half);
+  
   & > img {
     width: 70%;
     height: 50%;

@@ -21,10 +21,10 @@ import {
   import { MdContactMail } from "react-icons/md";
   import AnchorLink from "react-anchor-link-smooth-scroll";
   import { useContext } from "react";
-  import { GeneralContext } from "../../contexts/AuthContext";
+  import { AuthContext } from "../../contexts/AuthContext";
   
   const HeaderSpace = ({ show }) => {
-    const { currentLanguage, setCurrentLanguage } = useContext(GeneralContext);
+    const { currentLanguage, setCurrentLanguage } = useContext(AuthContext);
   
     const { t, i18n } = useTranslation();
   
@@ -45,6 +45,7 @@ import {
               <DashboardAdm to={`/login`}>
                 <img src={Logo} alt="NossBank Logo" />
               </DashboardAdm>
+              <h2>nossbank</h2>
             </ImageDiv>
   
             <NavBar>
