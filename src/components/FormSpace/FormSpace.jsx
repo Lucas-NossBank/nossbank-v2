@@ -29,7 +29,7 @@ const FormSpace = () =>  {
     return (
         <>
             <Divisor>     
-            <OpenAccount/>
+                <OpenAccount/>
                 <FormSection>
                     <h1>Solicite já sua máquina de cartão</h1>
 

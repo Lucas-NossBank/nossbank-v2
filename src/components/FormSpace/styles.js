@@ -13,7 +13,7 @@ import formBackground from "../../assets/img/mulher-conferindo-celular-em-pe_mob
 
 export const Divisor = styled.main`
   width: 100%;
-  height: 230vh;
+  height: 300vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;

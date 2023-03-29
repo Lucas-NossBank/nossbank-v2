@@ -16,6 +16,7 @@ export const Divisor = styled.main`
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
+  flex-direction: column-reverse;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -136,7 +137,7 @@ export const ContentDiv = styled.div`
   --g: 8px;    /* the gap */
   --c: var(--main-light-color); /* the color */
 
-  width: 230px;
+  width: 280px;
   height: 230px;
   background-color: var(--color-senary);
   border: 2px solid var(--color-primary);
@@ -157,24 +158,26 @@ export const ContentDiv = styled.div`
   & > h3 {
     font-family: var(--font-secondary-inter);
     text-align: center;
-    font-size: var(--font-text-14);
-    font-weight: var(--font-weight-700);
+    font-size: var(--font-subtitle-18);
+    font-weight: var(--font-weight-900);
     text-transform: uppercase;
     line-height: var(--font-line-height-20);
     color: var(--color-white-mode);
   }
 
   & > p {
-    font-family: var(--font-quartenary-mont);
+    font-family: var(--font-primary-nunito);
     text-align: center;
-    font-weight: var(--font-weight-500);
-    font-size: var(--font-text-12);
+    font-weight: var(--font-weight-800);
+    font-size: var(--font-text-16);
     line-height: var(--font-line-height-24);
     color: var(--color-white-mode);
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 180px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 2; 
+    -webkit-box-orient: vertical;
   }
 
   &:hover {
@@ -253,7 +256,7 @@ export const ContentDiv2 = styled.div`
   --g: 8px;    /* the gap */
   --c: var(--main-dark-color); /* the color */
 
-  width: 230px;
+  width: 280px;
   height: 230px;
   background-color: var(--color-primary);
   border: 2px solid var(--main-yellow);
@@ -264,8 +267,8 @@ export const ContentDiv2 = styled.div`
   padding: 20px;
   border-radius: var(--radius-8);
   aspect-ratio: 1;
-  outline: calc(var(--s)/2.5) solid var(--blur-effect-01);
-  outline-offset: calc(var(--s)/-2);
+  outline: calc(var(--s)/2.4) solid var(--blur-effect-01);
+  outline-offset: calc(var(--s)/-2.1);
   cursor: pointer;
   transition: 0.3s;
   z-index: 1001;
@@ -274,24 +277,26 @@ export const ContentDiv2 = styled.div`
   & > h3 {
     font-family: var(--font-secondary-inter);
     text-align: center;
-    font-size: var(--font-text-14);
-    font-weight: var(--font-weight-700);
+    font-size: var(--font-subtitle-18);
+    font-weight: var(--font-weight-900);
     text-transform: uppercase;
     line-height: var(--font-line-height-20);
     color: var(--main-dark-color);
   }
 
   & > p {
-    font-family: var(--font-quartenary-mont);
+    font-family: var(--font-primary-nunito);
     text-align: center;
-    font-weight: var(--font-weight-500);
-    font-size: var(--font-text-12);
+    font-weight: var(--font-weight-800);
+    font-size: var(--font-text-16);
     line-height: var(--font-line-height-24);
     color: var(--main-dark-color);
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 100px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 2; 
+    -webkit-box-orient: vertical;
   }
 
   &:hover {

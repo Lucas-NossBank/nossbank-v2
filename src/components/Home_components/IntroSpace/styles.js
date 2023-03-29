@@ -1,36 +1,9 @@
 import styled from "styled-components";
-import banner1 from "../../../assets/img/banners/banner_12.jpg"
-import banner2 from "../../../assets/img/banners/banner_14.jpg"
-import banner3 from "../../../assets/img/banners/banner_15.jpg"
-import banner4 from "../../../assets/img/banners/banner_16.jpg"
-import defaultBanner from "../../../assets/img/banners/banner_20.jpg"
 
-const changeDisplay = (hover) => {
-    switch (hover) {
-        case 1:
-            return "none";
-        default:
-            return "flex";
-    }
-}
-const changeBackground = (background) => {
-    switch (background) {
-        case 1:
-            return banner1;
-        case 2:
-            return banner2;
-        case 3:
-            return banner3;
-        case 4:
-            return banner4;
-        default:
-            return defaultBanner;
-    }
-}
 
 export const IntroSection = styled.section`
     width: 100%;
-    height: 150vh;
+    height: 180vh;
     background-color: var(--color-navigation);
     display: flex;
     flex-flow: column nowrap;
@@ -39,29 +12,46 @@ export const IntroSection = styled.section`
     box-shadow: 0px -10px 5px 0px #272974,0px 15px 5px 0px #272974;
     z-index: 1001;
     border: 2px solid var(--main-dark-color);
-    padding: 0px 10px;
 
     & > h1 {
         text-align: center;
-        font-size: var(--font-subtitle-30);
+        font-size: var(--font-subtitle-20);
         font-weight: var(--font-weight-700);
         color: var(--color-white-mode);
         font-family: var(--font-primary-nunito);
         letter-spacing: 2px;
-        line-height: var(--);
+        text-transform: uppercase;
+        text-shadow: 3px 5px 2px #474747;
     }
 
     & > h2 {
             font-family: var(--font-primary-nunito);
-            font-size: var(--font-subtitle-24);
+            font-size: var(--font-subtitle-18);
             font-weight:var(--font-weight-700);
             letter-spacing: 2px;
             width: 100%;
-            color: var(--color-primary);
             text-transform: uppercase;
+            text-align: center;
+            color: var(--color-primary);
+            text-shadow: 3px 5px 2px #474747;
+    }
 
-        }
+    & > h3 {
+            font-family: var(--font-primary-nunito);
+            font-size: var(--font-text-16);
+            font-weight:var(--font-weight-500);
+            letter-spacing: 2px;
+            width: 90%;
+            color: var(--color-white-mode);
+            text-align: center;
+            line-height: var(--font-line-height-30);
+    }
 
+    .mySwiper {
+        width: 100%;
+        height: 40vh;
+        background-color: var(--color-primary);
+    }
 
     @media screen and (min-width: 480px) {
     }
@@ -69,8 +59,7 @@ export const IntroSection = styled.section`
     }
     @media screen and (min-width: 768px) {
     }
-    @media screen and (min-width: 1024px) {
-        padding: 0px 65px;
+    @media screen and (min-width: 1024px) { 
     }
     @media screen and (min-width: 1200px) {
     }
@@ -78,271 +67,57 @@ export const IntroSection = styled.section`
     }
 `;
 
-/* --------------- ~> Skip Line <~ --------------- */
-
-export const MainText = styled.div`
+export const SwiperImgDiv = styled.div`
     width: 100%;
-    height: 150px;
-    display: ${({hover}) => changeDisplay(hover)};
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-
-    & > h3 {
-        text-align: center;
-        font-size: var(--font-subtitle-18);
-        font-weight: var(--font-weight-600);
-        color: var(--color-white-mode);
-        font-family: var(--font-primary-nunito);
-    }
-`;
-
-/* --------------- ~> Skip Line <~ --------------- */
-
-export const FirstTextChange = styled.div`
-    width: 100%;
-    height: 150px;
-    display: ${({ hover1 }) => (hover1 ? "flex" : "none")};
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-
-    & > h3 {
-        text-align: center;
-        font-size: var(--font-subtitle-18);
-        font-weight: var(--font-weight-600);
-        color: var(--color-white-mode);
-        background-color: var(--blur-effect-02);
-        width: 90%;
-        height: 50px;
-        border: 1px solid var(--color-primary);
-        border-radius: var(--radius-8);
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        font-family: var(--font-primary-nunito);
-    }
-`;
-export const SecondTextChange = styled.div`
-    width: 100%;
-    height: 150px;
-    display: ${({ hover2 }) => (hover2 ? "flex" : "none")};
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-
-    & > h3 {
-        text-align: center;
-        font-size: var(--font-subtitle-18);
-        font-weight: var(--font-weight-600);
-        color: var(--main-dark-color);
-        font-family: var(--font-quartenary-mont);
-    }
-`;
-export const ThirdTextChange = styled.div`
-    width: 100%;
-    height: 150px;
-    display: ${({ hover3 }) => (hover3 ? "flex" : "none")};
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-
-    & > h3 {
-        text-align: center;
-        font-size: var(--font-subtitle-18);
-        font-weight: var(--font-weight-600);
-        color: var(--color-white-mode);
-        font-family: var(--font-quartenary-mont);
-    }
-`;
-export const ForthTextChange = styled.div`
-    width: 100%;
-    height: 150px;
-    display: ${({ hover4 }) => (hover4 ? "flex" : "none")};
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-
-    & > h3 {
-        text-align: center;
-        font-size: var(--font-subtitle-18);
-        font-weight: var(--font-weight-600);
-        color: var(--color-white-mode);
-        font-family: var(--font-quartenary-mont);
-    }
-`;
-
-export const ImageDiv = styled.div`
-    width: 60%;
     height: 100%;
-`;
+    margin: 0 auto;
+    z-index: 1;
 
-export const ParallaxSpace = styled.div`
-    width: 80%;
-    height: 50vh;
-    background-color: aliceblue;
-    background-image: url(${({background}) => changeBackground(background)});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: 1s ease-in-out;
-    margin: 0;
-    /* display: grid;
-    place-content: center;  */
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    border-radius: var(--radius-8);
-
-    @media screen and (min-width: 480px) {
-    }
-    @media screen and (min-width: 600px) {
-    }
-    @media screen and (min-width: 768px) {
-    }
-    @media screen and (min-width: 1024px) {
-        justify-content: flex-start;
-    }
-    @media screen and (min-width: 1200px) {
-    }
-    @media screen and (max-width: 1920px) {
+    & > img {
+        width: 100%;
+        height: 100%;
     }
 `;
 
-export const ImageSpace = styled.div`
-        --g: 8px;   /* the gap */
-        --s: 200px; /* the size */
-        display: grid;
-        border-radius: 50%;
-        z-index: 1001;
-        align-self: center;
-
-        & > img {
-            grid-area: 1/1;
-            width: 180px;
-            aspect-ratio: 1;
-            object-fit: cover;
-            border: 5px solid var(--color-primary);
-            border-radius: 50%;
-            transform: translate(var(--_x,0),var(--_y,0));
-            cursor: pointer;
-            z-index: 1001;
-            transition: .3s, z-index 0s .3s; 
-        }
-
-        & > img:hover {
-            --_i: 1;
-            z-index: 1002;
-            transition: transform .2s, clip-path .3s .2s, z-index 0s;
-        }
-        
-        &:hover img { 
-            transform: translate(0,0);
-        }
-
-        & > img:nth-child(1) {
-            clip-path: polygon(50% 50%,calc(50%*var(--_i,0)) calc(120%*var(--_i,0)),0 calc(100%*var(--_i,0)),0 0,100% 0,100% calc(100%*var(--_i,0)),calc(100% - 50%*var(--_i,0)) calc(120%*var(--_i,0)));
-            --_y: calc(-1*var(--g))    
-        }
-        & > img:nth-child(2) {
-            clip-path: polygon(50% 50%,calc(100% - 120%*var(--_i,0)) calc(50%*var(--_i,0)),calc(100% - 100%*var(--_i,0)) 0,100% 0,100% 100%,calc(100% - 100%*var(--_i,0)) 100%,calc(100% - 120%*var(--_i,0)) calc(100% - 50%*var(--_i,0)));
-             --_x: var(--g)    
-        }
-        & > img:nth-child(3) {
-            clip-path: polygon(50% 50%,calc(100% - 50%*var(--_i,0)) calc(100% - 120%*var(--_i,0)),100% calc(100% - 120%*var(--_i,0)),100% 100%,0 100%,0 calc(100% - 100%*var(--_i,0)),calc(50%*var(--_i,0)) calc(100% - 120%*var(--_i,0)));
-            --_y: var(--g)   
-        }
-        & > img:nth-child(4) {
-            clip-path: polygon(50% 50%,calc(120%*var(--_i,0)) calc(50%*var(--_i,0)),calc(100%*var(--_i,0)) 0,0 0,0 100%,calc(100%*var(--_i,0)) 100%,calc(120%*var(--_i,0)) calc(100% - 50%*var(--_i,0)));
-            --_x: calc(-1*var(--g))  
-        } 
-
-    @media screen and (min-width: 480px) {
-    }
-    @media screen and (min-width: 600px) {
-    }
-    @media screen and (min-width: 768px) {
-    }
-    @media screen and (min-width: 1024px) {
-        --g: 8px;   /* the gap */
-        --s: 400px; /* the size */
-        display: grid;
-        border-radius: 50%;
-        z-index: 1001;
-        align-self: center;
-        margin-left: 60px;
-
-        & > img {
-            grid-area: 1/1;
-            width: 330px;
-            aspect-ratio: 1;
-            object-fit: cover;
-            border: 5px solid var(--color-primary);
-            border-radius: 50%;
-            transform: translate(var(--_x,0),var(--_y,0));
-            cursor: pointer;
-            z-index: 1001;
-            transition: .3s, z-index 0s .3s; 
-        }
-
-        & > img:hover {
-            --_i: 1;
-            z-index: 1002;
-            transition: transform .2s, clip-path .3s .2s, z-index 0s;
-        }
-        
-        &:hover img { 
-            transform: translate(0,0);
-        }
-
-        & > img:nth-child(1) {
-            clip-path: polygon(50% 50%,calc(50%*var(--_i,0)) calc(120%*var(--_i,0)),0 calc(100%*var(--_i,0)),0 0,100% 0,100% calc(100%*var(--_i,0)),calc(100% - 50%*var(--_i,0)) calc(120%*var(--_i,0)));
-            --_y: calc(-1*var(--g))    
-        }
-        & > img:nth-child(2) {
-            clip-path: polygon(50% 50%,calc(100% - 120%*var(--_i,0)) calc(50%*var(--_i,0)),calc(100% - 100%*var(--_i,0)) 0,100% 0,100% 100%,calc(100% - 100%*var(--_i,0)) 100%,calc(100% - 120%*var(--_i,0)) calc(100% - 50%*var(--_i,0)));
-             --_x: var(--g)    
-        }
-        & > img:nth-child(3) {
-            clip-path: polygon(50% 50%,calc(100% - 50%*var(--_i,0)) calc(100% - 120%*var(--_i,0)),100% calc(100% - 120%*var(--_i,0)),100% 100%,0 100%,0 calc(100% - 100%*var(--_i,0)),calc(50%*var(--_i,0)) calc(100% - 120%*var(--_i,0)));
-            --_y: var(--g)   
-        }
-        & > img:nth-child(4) {
-            clip-path: polygon(50% 50%,calc(120%*var(--_i,0)) calc(50%*var(--_i,0)),calc(100%*var(--_i,0)) 0,0 0,0 100%,calc(100%*var(--_i,0)) 100%,calc(120%*var(--_i,0)) calc(100% - 50%*var(--_i,0)));
-            --_x: calc(-1*var(--g))  
-        } 
-    }
-    @media screen and (min-width: 1200px) {
-    }
-    @media screen and (max-width: 1920px) {
-    }
-`;
+/*------------------------- Skip line -------------------------*/
 
 
 /*------------------------- Skip line -------------------------*/
 
 export const NoticeBoard = styled.section`
     width: 100%;
-    height: 50vh;
+    height: 80vh;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
     overflow: auto;
+    padding: 0px 10%;
+
+    @media screen and (min-width: 480px) {
+    }
+    @media screen and (min-height: 650px) {
+        height: 65vh;
+    }
+    @media screen and (min-height: 768px) {
+        height: 55vh;
+    }
+    @media screen and (min-height: 800px) {
+        height: 50vh;
+    }
+    @media screen and (min-width: 1024px) {
+    }
+    @media screen and (min-width: 1200px) {
+    }
+    @media screen and (max-width: 1920px) {
+    }
 `;
 
 
 export const NoticeCard = styled.article`
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0);
-    transform: translateX(-50%) translateY(-50%) translateZ(0); */
     position: relative;
-    width: 320px;
-    height: 48vh;
+    min-width: 300px; /* change to width to fix size */ 
+    height: 65vh;
     background-color: var(--blur-effect-02);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     overflow: hidden;
@@ -376,10 +151,36 @@ export const NoticeCard = styled.article`
     -webkit-transition-delay: 0.2s;
     transition-delay: 0.2s;
   }
+
+    @media screen and (min-width: 480px) {
+    }
+    @media screen and (min-height: 650px) {
+        height: 60vh;
+    }
+    @media screen and (min-height: 768px) {
+        height: 50vh;
+    }
+    @media screen and (min-height: 800px) {
+        height: 45vh;
+    }
+    @media screen and (min-height: 900px) {
+        height: 43vh;
+    }
+    @media screen and (min-height: 1024px) {
+        height: 40vh;
+    }
+    @media screen and (min-height: 1100px) {
+        height: 38vh;
+    }
+    @media screen and (min-height: 1200px) {
+        height: 34vh;
+    }
+    @media screen and (max-width: 1920px) {
+    }
 `;
 
 export const NoticeCardHeader = styled.header`
-  height: 245px;
+  height: 230px;
   overflow: hidden;
   background-color: var(--main-dark-color);
   -webkit-transition: height 0.5s;
@@ -464,7 +265,7 @@ export const NoticeCardBody = styled.section`
     position: absolute;
     left: 20px;
     right: 20px;
-    bottom: 60px;
+    bottom: 120px;
     margin: 0;
     padding: 0;
     color: var(--color-grey-5);
@@ -479,6 +280,12 @@ export const NoticeCardBody = styled.section`
     transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 2; 
+    -webkit-box-orient: vertical;
   }
 `;
 

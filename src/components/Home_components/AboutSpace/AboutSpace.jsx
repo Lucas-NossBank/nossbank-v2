@@ -9,8 +9,8 @@ const AboutSpace = () => {
     return (
         <>
             <AboutSection>
-                <AboutDiv>
                     <h1>Sobre a Nossbank</h1>
+                <AboutDiv>
                     <p>Nosso propósito é atender clientes e parceiros de forma humanizada, personalizada e transparente, sendo referência em qualidade no atendimento e excelência na prestação de serviços de meios de pagamentos.</p>
 
                 </AboutDiv>
@@ -33,9 +33,9 @@ const AboutSpace = () => {
                     </SquareImage>
                     
                 </ValueImgSpace>
-                <Divider>
+                {/* <Divider>
 
-                    {/* <WaveDnaUp>
+                    <WaveDnaUp>
                         <div></div>
                         <div></div>
                         <div></div>
@@ -58,8 +58,8 @@ const AboutSpace = () => {
                         <div></div>
                         <div></div>
                         <div></div>
-                    </WaveDnaBot> */}
-                </Divider>
+                    </WaveDnaBot>
+                </Divider> */}
             </AboutSection>
         </>
     )

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const OpenAccountSection = styled.section`   
     width: 100%;
-    height: 110vh;
+    height: 180vh;
     background-color: var(--color-senary);
     display: flex;
     flex-flow: column nowrap;
@@ -72,7 +72,7 @@ export const DualGallery = styled.div`
     & > img {
         --_p: calc(-1*var(--g));
         grid-area: 1/1;
-        width: 350px; /* control the size */
+        width: 250px; /* control the size */
         aspect-ratio: 1;
         cursor: pointer;
         transition: .4s .1s;

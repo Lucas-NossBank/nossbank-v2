@@ -58,7 +58,7 @@ const SolutionSpace = () => {
 
                                     <IconContext.Provider
                                         value={{
-                                            color: "var(--color-white-mode)",
+                                            color: "var(--main-dark-color)",
                                             size: "2em",
                                         }}
                                     >                                    
@@ -93,7 +93,7 @@ const SolutionSpace = () => {
 
                                     <IconContext.Provider
                                         value={{
-                                            color: "var(--color-white-mode)",
+                                            color: "var(--main-dark-color)",
                                             size: "2em",
                                         }}
                                     >                                    
@@ -128,7 +128,7 @@ const SolutionSpace = () => {
 
                                     <IconContext.Provider
                                         value={{
-                                            color: "var(--color-white-mode)",
+                                            color: "var(--main-dark-color)",
                                             size: "2em",
                                         }}
                                     >                                    
@@ -164,7 +164,7 @@ const SolutionSpace = () => {
 
                                     <IconContext.Provider
                                         value={{
-                                            color: "var(--color-white-mode)",
+                                            color: "var(--main-dark-color)",
                                             size: "2em",
                                         }}
                                     >                                    

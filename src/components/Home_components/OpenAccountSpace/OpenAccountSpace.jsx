@@ -1,7 +1,6 @@
-import { AppleStore, DownloadSpace, DualGallery, GoogleStore, OpenAccountSection, QRCODESpace } from "./styles"
+import { AppleStore, DownloadSpace, DualGallery, GoogleStore,  OpenAccountSection, QRCODESpace } from "./styles"
 import image01 from "../../../assets/img/machines/machine_101.png"
-import image02 from "../../../assets/img/machines/machine_07.png"
-import DnaAnimation from "../../Animation/DnaAnimation/DnaAnimation"
+import image02 from "../../../assets/img/machines/machine_07_model.png"
 import downloadGoogle from "../../../assets/img/banners/download_google_01.png"
 import downloadApple from "../../../assets/img/banners/download_applestore_01.png"
 import qrApple from "../../../assets/img/banners/apple_qrcode.png"
@@ -16,9 +15,7 @@ const OpenAccount = () => {
                 <p>Conta digital para donos de negócios e empreendedores como você.</p>
                 <DualGallery>
                     <img src={image01} alt="ref 01" />
-                    
-                    <img src={image02} alt="ref 02" />
-                
+                    <img src={image02} alt="ref 02" />  
                 </DualGallery>
 
                 <p >Descomplique sua vida. Solicite o seu Nossbank</p>

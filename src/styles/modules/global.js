@@ -108,6 +108,7 @@ const GlobalStyle = createGlobalStyle`
     --font-line-height-40: 40px;
     --font-line-height-38: 38px;
     --font-line-height-32: 32px;
+    --font-line-height-30: 30px;
     --font-line-height-28: 28px;
     --font-line-height-24: 24px;
     --font-line-height-20: 20px;

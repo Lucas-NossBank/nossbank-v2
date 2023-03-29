@@ -1,13 +1,19 @@
-import { CCardImage, CCarousel, CCarouselItem } from "@coreui/react";
+
 import styled from "styled-components";
 
-export const CarouselDiv = styled(CCarousel)`
+export const CarouselDiv = styled.div`
     width: 90%;
     height: 40vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
+
+    .mySwiper {
+        width: 100%;
+        height: 40vh;
+    }
 
     @media screen and (min-width: 480px) {
     }
@@ -24,27 +30,14 @@ export const CarouselDiv = styled(CCarousel)`
     }
 `;
 
-export const CarouselIt = styled(CCarouselItem)`
+export const SwiperImgDiv = styled.div`
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-`;
+    margin: 0 auto;
+    z-index: 1;
 
-export const Machine01 = styled(CCardImage)`
-    width: 100%;
-    height: 100%;
-    display: block;
-`;
-export const Machine02 = styled(CCardImage)`
-    width: 100%;
-    height: 100%;
-    display: block;
-`;
-export const Machine03 = styled(CCardImage)`
-    width: 100%;
-    height: 100%;
-    display: block;
+    & > img {
+        width: 100%;
+        height: 100%;
+    }
 `;

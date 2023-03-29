@@ -1,10 +1,4 @@
-import { FirstTextChange, ForthTextChange, ImageSpace, IntroSection, MainText, ParallaxSpace, SecondTextChange,  NoticeCard,  NoticeCardBody,  NoticeCardCategory,  NoticeCardDate,  NoticeCardDay,  NoticeCardFooter,  NoticeCardHeader,  NoticeCardMonth,  ThirdTextChange, NoticeBoard, FooterClock, FooterComment } from "./styles"
-import mainPhoto01 from "../../../assets/img/main_photos/photo_mobile_01.jpg"
-import mainPhoto02 from "../../../assets/img/main_photos/photo_mobile_04.png"
-import mainPhoto03 from "../../../assets/img/main_photos/photo_mobile_02.png"
-import mainPhoto04 from "../../../assets/img/main_photos/photo_mobile_10.png"
-import { useContext, useState } from "react"
-import { AuthContext } from "../../../contexts/AuthContext"
+import {  IntroSection,  NoticeCard,  NoticeCardBody,  NoticeCardCategory,  NoticeCardDate,  NoticeCardDay,  NoticeCardFooter,  NoticeCardHeader,  NoticeCardMonth, NoticeBoard, FooterClock, FooterComment, SwiperImgDiv } from "./styles"
 import { BsClockHistory } from "react-icons/bs"
 import { AiOutlineComment } from "react-icons/ai"
 import { IconContext } from "react-icons"
@@ -13,83 +7,85 @@ import banner02 from "../../../assets/img/banners/banner_14.jpg"
 import banner03 from "../../../assets/img/banners/banner_17.jpg"
 import banner04 from "../../../assets/img/banners/banner_20.jpg"
 import banner05 from "../../../assets/img/banners/banner_12.jpg"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Pagination,  Autoplay, Scrollbar } from "swiper";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/scrollbar";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+
 const IntroSpace = () => {
 
-    const { hover, hover1, hover2, hover3, hover4, setHover, setHover1, setHover2, setHover3, setHover4 } = useContext(AuthContext);
-
-    const [background, setBackground] = useState(Number)
 
     return (
         <>
             <IntroSection>
-                    <h1>100% Digital</h1>
-                <ParallaxSpace background={background}>
-                    <ImageSpace>
-                        <img src={mainPhoto01} alt="a hot air balloon"
-                        onMouseEnter={(()=> {
-                            setHover(1)
-                            setHover1(true)
-                            setBackground(1)
-                        })} 
-                        onMouseLeave={(()=> {
-                            setHover(0)
-                            setHover1(false)
-                            setBackground(0)
-                            })}/>
-                        
-                        <img src={mainPhoto02} alt="a hot air balloon"
-                        onMouseEnter={(()=> {
-                            setHover(1)
-                            setHover2(true)
-                            setBackground(2)
-                        })} 
-                        onMouseLeave={(()=> {
-                            setHover(0)
-                            setHover2(false)
-                            setBackground(0)
-                            })}/>
-                        
-                        <img src={mainPhoto03} alt="a hot air balloon"
-                        onMouseEnter={(()=> {
-                            setHover(1)
-                            setHover3(true)
-                            setBackground(3)
-                        })} 
-                        onMouseLeave={(()=> {
-                            setHover(0)
-                            setHover3(false)
-                            setBackground(0)
-                            })}/>
-                        
-                        <img src={mainPhoto04} alt="a hot air balloon"
-                        onMouseEnter={(()=> {
-                            setHover(1)
-                            setHover4(true)
-                            setBackground(4)
-                        })} 
-                        onMouseLeave={(()=> {
-                            setHover(0)
-                            setHover4(false)
-                            setBackground(0)
-                            })}/>
-                        
-                    </ImageSpace>
-                </ParallaxSpace>
-                    <MainText hover={hover}>
-                        <h3>Controle sua conta de forma prática e segura. Evite filas e deslocamentos. Comunique-se com atendentes de verdade.</h3>
-                    </MainText>
-                    <FirstTextChange hover1={hover1}>
-                        <h3>Primeiro texto.</h3>
-                    </FirstTextChange>
-                    <SecondTextChange hover2={hover2}>
-                        <h3>Segundo texto.</h3>
-                    </SecondTextChange>
-                    <ThirdTextChange hover3={hover3}>
-                        <h3>Terceiro texto.</h3>
-                    </ThirdTextChange>
-                    <ForthTextChange hover4={hover4}>
-                        <h3>Quarto texto.</h3>
-                    </ForthTextChange>
+                    
+                    <Swiper
+                        modules={[Autoplay, Pagination, Scrollbar]}
+                        slidesPerView={1}
+                        scrollbar={{
+                            hide: true
+                        }}
+                        autoplay={{
+                              delay: 3500,
+                              pauseOnMouseEnter: true,
+                              disableOnInteraction: false
+                             }}
+                        loop
+                        className="mySwiper"
+                    >
+                        <SwiperSlide>
+                            <SwiperImgDiv>
+                                <img src={banner01} alt="#" />
+                            </SwiperImgDiv>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <SwiperImgDiv>
+                                <img src={banner02} alt="#" />
+                            </SwiperImgDiv>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <SwiperImgDiv>
+                                <img src={banner03} alt="#" />
+                            </SwiperImgDiv>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <SwiperImgDiv>
+                                <img src={banner04} alt="#" />
+                            </SwiperImgDiv>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <SwiperImgDiv>
+                                <img src={banner01} alt="#" />
+                            </SwiperImgDiv>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <SwiperImgDiv>
+                                <img src={banner01} alt="#" />
+                            </SwiperImgDiv>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <SwiperImgDiv>
+                                <img src={banner01} alt="#" />
+                            </SwiperImgDiv>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <SwiperImgDiv>
+                                <img src={banner01} alt="#" />
+                            </SwiperImgDiv>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <SwiperImgDiv>
+                                <img src={banner01} alt="#" />
+                            </SwiperImgDiv>
+                        </SwiperSlide>
+                    </Swiper>
+
+                <h1>Banco 100% Digital</h1> 
+
+                <h3>Controle sua conta de forma prática e segura. Evite filas e deslocamentos. Comunique-se com atendentes de verdade.</h3>
 
                 <h2>Faq e Tutoriais</h2>
                 <NoticeBoard>
@@ -127,7 +123,7 @@ const IntroSpace = () => {
                                 </span>
                             </FooterClock> 
                             <FooterComment>
-                                <IconContext.Provider
+                               <IconContext.Provider
                                 value={{
                                     color: "var(--color-white-mode)",
                                     size: "1.5em",

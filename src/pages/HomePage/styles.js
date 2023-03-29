@@ -1,5 +1,6 @@
 import styled, {keyframes} from "styled-components";
-import main_banner from "../../assets/logo/nossbank_capa_bgoff.png"
+import main_banner01 from "../../assets/logo/nossbank_capa_bgoff.png"
+import main_banner02 from "../../assets/logo/nossbank.png"
 
 const Slide = keyframes`
    0% {
@@ -16,12 +17,27 @@ const Slide = keyframes`
 export const HomeSpace = styled.main`
     width: 100%;
     height: 100vh;
-    background-image: url(${main_banner});
+    background-image: url(${main_banner02});
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     position: relative;
     z-index: 1001;
+    object-fit: cover;
+
+    @media screen and (min-width: 480px) {
+    }
+    @media screen and (min-width: 600px) {
+    }
+    @media screen and (min-width: 768px) {
+      background-image: url(${main_banner01});
+    }
+    @media screen and (min-width: 1024px) {
+    }
+    @media screen and (min-width: 1200px) {
+    }
+    @media screen and (max-width: 1920px) {
+    }
 `
 
 export const Bg01 = styled.div`
